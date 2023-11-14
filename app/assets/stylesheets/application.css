@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+.words {
+  background-color: rgba(211, 255, 68, 0.653);
+  border-radius: 5px;
+  list-style-type: none;
+  font-size: 36px;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center;
+  text-align: center;
+  margin: 1%;
+  box-shadow: 2px 2px 5px rgb(15, 15, 15);
+}

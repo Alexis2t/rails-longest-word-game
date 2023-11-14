@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="mt-4">Find the longest word!</h1>
+  <div class="d-flex mb-5 mt-5">
+    <% @letters.each do |letter| %>
+      <li class="words"><%=letter%></li>
+    <% end %>
+  </div>
+
+  <form action="/score" method="post" data-turbo="false" class="row g-3 justify-content-center">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, @letters %>
+
+    <div class="col-auto">
+      <input id="word" type="text" class="form-control" name="word" placeholder="Your word...">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-success mb-3">Confirm</button>
+    </div>
+  </form>
+</div>
